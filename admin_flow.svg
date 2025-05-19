@@ -1,0 +1,100 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Định nghĩa style -->
+  <defs>
+    <style>
+      .box { fill: #f2e6ff; stroke: #6633cc; stroke-width: 2; rx: 10; ry: 10; }
+      .arrow { stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+      .text { font-family: Arial; font-size: 14px; fill: #333; text-anchor: middle; }
+      .title { font-family: Arial; font-size: 18px; font-weight: bold; fill: #1a1a1a; text-anchor: middle; }
+      .module { font-family: Arial; font-size: 16px; font-weight: bold; fill: #4d4d4d; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- Tiêu đề -->
+  <text x="400" y="30" class="title">Luồng hoạt động cho Admin</text>
+  
+  <!-- Đăng nhập -->
+  <rect x="350" y="60" width="120" height="60" class="box" />
+  <text x="410" y="95" class="text">Đăng nhập Admin</text>
+  
+  <!-- Dashboard -->
+  <rect x="350" y="160" width="120" height="60" class="box" />
+  <text x="410" y="195" class="text">Dashboard</text>
+  
+  <line x1="410" y1="120" x2="410" y2="160" class="arrow" />
+  
+  <!-- Các module chính -->
+  <text x="200" y="270" class="module">Quản lý sản phẩm</text>
+  <text x="600" y="270" class="module">Quản lý đơn hàng</text>
+  
+  <!-- Module sản phẩm -->
+  <rect x="50" y="300" width="120" height="50" class="box" />
+  <text x="110" y="330" class="text">Danh sách SP</text>
+  
+  <rect x="50" y="380" width="120" height="50" class="box" />
+  <text x="110" y="410" class="text">Thêm SP mới</text>
+  
+  <rect x="50" y="460" width="120" height="50" class="box" />
+  <text x="110" y="490" class="text">Sửa SP</text>
+  
+  <rect x="200" y="300" width="120" height="50" class="box" />
+  <text x="260" y="330" class="text">Danh mục SP</text>
+  
+  <rect x="200" y="380" width="120" height="50" class="box" />
+  <text x="260" y="410" class="text">Thuộc tính SP</text>
+  
+  <rect x="200" y="460" width="120" height="50" class="box" />
+  <text x="260" y="490" class="text">Quản lý kho</text>
+  
+  <!-- Module đơn hàng -->
+  <rect x="450" y="300" width="120" height="50" class="box" />
+  <text x="510" y="330" class="text">Đơn mới</text>
+  
+  <rect x="450" y="380" width="120" height="50" class="box" />
+  <text x="510" y="410" class="text">Đang xử lý</text>
+  
+  <rect x="450" y="460" width="120" height="50" class="box" />
+  <text x="510" y="490" class="text">Đã hoàn thành</text>
+  
+  <rect x="600" y="300" width="120" height="50" class="box" />
+  <text x="660" y="330" class="text">Chi tiết đơn</text>
+  
+  <rect x="600" y="380" width="120" height="50" class="box" />
+  <text x="660" y="410" class="text">Thanh toán</text>
+  
+  <rect x="600" y="460" width="120" height="50" class="box" />
+  <text x="660" y="490" class="text">Báo cáo</text>
+  
+  <!-- Các mũi tên từ Dashboard -->
+  <line x1="410" y1="220" x2="200" y2="270" class="arrow" />
+  <line x1="410" y1="220" x2="600" y2="270" class="arrow" />
+  
+  <!-- Các mũi tên module sản phẩm -->
+  <line x1="200" y1="270" x2="110" y2="300" class="arrow" />
+  <line x1="200" y1="270" x2="260" y2="300" class="arrow" />
+  <line x1="110" y1="350" x2="110" y2="380" class="arrow" />
+  <line x1="110" y1="430" x2="110" y2="460" class="arrow" />
+  <line x1="260" y1="350" x2="260" y2="380" class="arrow" />
+  <line x1="260" y1="430" x2="260" y2="460" class="arrow" />
+  
+  <!-- Các mũi tên module đơn hàng -->
+  <line x1="600" y1="270" x2="510" y2="300" class="arrow" />
+  <line x1="600" y1="270" x2="660" y2="300" class="arrow" />
+  <line x1="510" y1="350" x2="510" y2="380" class="arrow" />
+  <line x1="510" y1="430" x2="510" y2="460" class="arrow" />
+  <line x1="660" y1="350" x2="660" y2="380" class="arrow" />
+  <line x1="660" y1="430" x2="660" y2="460" class="arrow" />
+  
+  <!-- Các module khác -->
+  <rect x="350" y="380" width="120" height="50" class="box" style="fill: #ffe6cc;" />
+  <text x="410" y="410" class="text">Quản lý người dùng</text>
+  
+  <rect x="350" y="460" width="120" height="50" class="box" style="fill: #ffe6cc;" />
+  <text x="410" y="490" class="text">Cấu hình hệ thống</text>
+  
+  <line x1="410" y1="220" x2="410" y2="380" class="arrow" />
+  <line x1="410" y1="430" x2="410" y2="460" class="arrow" />
+</svg>

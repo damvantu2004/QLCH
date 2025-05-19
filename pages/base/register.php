@@ -241,7 +241,7 @@ function removeError(selector) {
         <div class="w-100 text-center p-relative">
             <div class="title">
                 <h3 class="heading h3">Thành viên đăng ký</h3>
-                <p class="desc">Đăng ký tài khoản ngay để mua hàng tại Perfume Paradise!</p>
+                <p class="desc">Đăng ký tài khoản ngay để mua hàng tại TheGioiDiDong!</p>
             </div>
             <div class="title-line"></div> -->
 

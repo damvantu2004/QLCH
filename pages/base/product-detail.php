@@ -1,9 +1,12 @@
 <?php
-$product_name = $_GET['product_name'];
-$sql_product_detail = "SELECT * FROM product JOIN capacity ON product.capacity_id = capacity.capacity_id WHERE product.product_name = '" . $_GET['product_name'] . "' LIMIT 1";
+$product_id = isset($_GET['product_id']) ? $_GET['product_id'] : 0;
+
+$sql_product_detail = "SELECT * FROM product JOIN capacity ON product.capacity_id = capacity.capacity_id WHERE product.product_id = '" . $product_id . "' LIMIT 1";
 $query_product_detail = mysqli_query($mysqli, $sql_product_detail);
-$query_evaluate = mysqli_query($mysqli, "SELECT * FROM evaluate WHERE product_name='$product_name' AND evaluate_status = 1");
-$query_evaluate_rating = mysqli_query($mysqli, "SELECT * FROM evaluate WHERE product_name='$product_name' AND evaluate_status = 1");
+
+// Now use the product_id for your evaluate queries
+$query_evaluate = mysqli_query($mysqli, "SELECT * FROM evaluate WHERE product_id='$product_id' AND evaluate_status = 1");
+$query_evaluate_rating = mysqli_query($mysqli, "SELECT * FROM evaluate WHERE product_id='$product_id' AND evaluate_status = 1");
 
 $rate1 = 0;
 $rate2 = 0;

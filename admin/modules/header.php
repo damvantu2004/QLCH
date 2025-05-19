@@ -22,7 +22,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
         </div>
         <div>
             <a class="navbar-brand brand-logo" href="index.php?action=home&query">
-                <img src="images/logo_paradise.jpg" alt="logo" />
+                <img src="https://webnow.vn/wp-content/uploads/2022/12/ae1b29c58f064bf3572290cf6eadcbd6.jpg" alt="logo" />
             </a>
         </div>
     </div>

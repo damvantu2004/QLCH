@@ -26,7 +26,7 @@ class Mailer {
             $mail->CharSet = 'UTF-8';                             // Set character encoding to UTF-8
 
             //Recipients
-            $mail->setFrom('nguyenduytaiskt359@gmail.com', 'Cửa hàng Perfume Paradise!');
+            $mail->setFrom('nguyenduytaiskt359@gmail.com', 'Cửa hàng TheGioiDiDong!');
 
             //Người nhận (khách hàng)
             $mail->addAddress($maildathang, 'Khách hàng');
@@ -63,7 +63,7 @@ class Mailer {
 	
 			$mail->CharSet = 'UTF-8';
 	
-			$mail->setFrom('nguyenduytaiskt359@gmail.com', 'Cửa hàng Perfume Paradise!');
+			$mail->setFrom('nguyenduytaiskt359@gmail.com', 'Cửa hàng TheGioiDiDong!');
 			$mail->addAddress($email);
 	
 			$mail->isHTML(true);

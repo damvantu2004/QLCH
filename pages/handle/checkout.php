@@ -87,14 +87,14 @@ if (isset($_POST['redirect'])) {
                 $tieude = "Đặt hàng từ website taitam16c.vn thành công!";
                 $noidung = '<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                             <div style="border: 1px solid #ddd; padding: 20px; max-width: 600px; margin: 20px auto; border-radius: 8px; background-color: #f9f9f9;">
-                                <h2 style="text-align: center; color: #4CAF50;">Cảm ơn bạn đã đặt hàng tại Perfume Paradise!</h2>
+                                <h2 style="text-align: center; color: #4CAF50;">Cảm ơn bạn đã đặt hàng tại TheGioiDiDong!</h2>
                                 <p>Xin chào quý khách,</p>
                                 <p>Chúng tôi rất vui mừng thông báo rằng đơn hàng của bạn với mã <strong style="color: #4CAF50;">'.$order_code.'<?php echo ". $order_code ."; ?></strong> đã được xác nhận thành công.</p>
                                 <p>Chúng tôi đang xử lý đơn hàng của bạn và sẽ sớm gửi đến địa chỉ đã cung cấp. Hãy giữ liên lạc để nhận thông báo khi hàng được giao!</p>
                                 <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-                                <p>Chúng tôi rất trân trọng sự tin tưởng của bạn khi lựa chọn sản phẩm từ Perfume Paradise.</p>
+                                <p>Chúng tôi rất trân trọng sự tin tưởng của bạn khi lựa chọn sản phẩm từ TheGioiDiDong.</p>
                                 <p>Chúc bạn một ngày vui vẻ và tràn đầy năng lượng!</p>
-                                <p style="text-align: center; font-style: italic;">-- Đội ngũ Perfume Paradise</p>
+                                <p style="text-align: center; font-style: italic;">-- Đội ngũ TheGioiDiDong</p>
                             </div>
                         </div>
 ';
@@ -114,7 +114,7 @@ if (isset($_POST['redirect'])) {
         } elseif ($order_type == 4) {
             // xu ly toan bang vnpay
             $vnp_TxnRef = $order_code; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
-            $vnp_OrderInfo = 'Thanh toán đơn hàng Perfume Paradise';
+            $vnp_OrderInfo = 'Thanh toán đơn hàng TheGioiDiDong';
             $vnp_OrderType = 'billpayment';
             $vnp_Amount = $total_amount * 100;
             $vnp_Locale = 'vn';

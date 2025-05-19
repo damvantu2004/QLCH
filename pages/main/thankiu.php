@@ -207,7 +207,7 @@ if ($status == 1) {
                     <img src="assets/images/icon/icon-success.gif" alt="success">
                 </div>
                 <h1 class="thankiu__heading h2">Đặt hàng thành công</h1>
-                <span class="thankiu__heading2 h3">Cảm ơn quý khách đã mua hàng tại Perfume Paradise</span>
+                <span class="thankiu__heading2 h3">Cảm ơn quý khách đã mua hàng tại TheGioiDiDong</span>
                 <p class="thankiu__description">Đơn hàng của quý khách đã được tiếp nhận và đang trong thời gian xử lý. Chúng tôi sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được giao.</p>
                 <div class="thankiu_link">
                     <a href="index.php" class="btn btn__outline">Trang chủ</a>

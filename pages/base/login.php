@@ -1,4 +1,4 @@
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <section class="login pd-section">
     <div class="form-box">
         <div class="form-value">
@@ -17,9 +17,7 @@
                 <div class="forget">
                     <label for=""><a href="index.php?page=forget_password">Forget Password</a></label>
                 </div>
-
-                <!-- Thêm Google reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="6LfxTWsqAAAAAHz75FkiJKKg-kqhlEQzBMrKA-Yh"></div>
+            
                 <button type="submit" name="login">Đăng nhập</button>
                 <div class="register">
                     <p>Chưa có tài khoản <a href="index.php?page=register">Đăng ký</a></p>
@@ -59,14 +57,6 @@ if (isset($_GET['message']) && $_GET['message'] == 'success') {
     echo '<script>';
     echo 'showErrorMessage();';
     echo 'window.history.pushState(null, "", "index.php?page=product_detail&product_id=' . $product_id . '");';
-    echo '</script>';
-} elseif (isset($_GET['message']) && $_GET['message'] == 'captcha_failed') {
-    echo '<script>';
-    echo 'showErrorMessage("Vui lòng xác minh CAPTCHA.");';
-    echo '</script>';
-} elseif (isset($_GET['message']) && $_GET['message'] == 'captcha_error') {
-    echo '<script>';
-    echo 'showErrorMessage("Không có CAPTCHA, vui lòng thử lại.");';
     echo '</script>';
 }
 ?>

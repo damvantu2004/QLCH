@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli("localhost","root","","dbperfume");
+    $mysqli = new mysqli("localhost","root","","QLCH");
 
     // Check connection
     if ($mysqli->connect_errno) {
