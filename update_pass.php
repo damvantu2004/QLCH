@@ -1,6 +1,6 @@
 <?php
 // Kết nối với cơ sở dữ liệu
-$mysqli = new mysqli("localhost", "root", "", "dbperfume");
+$mysqli = new mysqli("localhost", "root", "", "QLCH");
 
 // Kiểm tra kết nối
 if ($mysqli->connect_error) {
