@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Kết nối tới cơ sở dữ liệu
-$mysqli = new mysqli("localhost", "root", "", "dbperfume");
+$mysqli = new mysqli("localhost", "root", "", "QLCH");
 if ($mysqli->connect_error) {
     die("Kết nối thất bại: " . $mysqli->connect_error);
 }
